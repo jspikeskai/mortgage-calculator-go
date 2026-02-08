@@ -71,7 +71,7 @@ var config = MortgageConfig{
 	MaxInterestRate: 30,
 
 	MinPeriod: 5,
-	MaxPeriod: 30,
+	MaxPeriod: 50,
 }
 
 func main() {
