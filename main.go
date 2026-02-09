@@ -160,7 +160,9 @@ func readInput(prompt string, scanner *bufio.Scanner) float64 {
 		fmt.Print(prompt)
 		scanner.Scan()
 		input := strings.TrimSpace(scanner.Text())
+		input = strings.ReplaceAll(input, "$", "")
 		input = strings.ReplaceAll(input, ",", "")
+		input = strings.ReplaceAll(input, " ", "")
 
 		if strings.ToLower(input) == "quit" {
 			fmt.Println(Color(CYAN, QUIT_MESSAGE))
